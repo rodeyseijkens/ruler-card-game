@@ -1,0 +1,104 @@
+<html>
+<head>
+    <title>State & Co.</title>
+    <link rel="stylesheet/less" type="text/les" href="assets/less/style.less">
+</head>
+<body>
+
+<div id="card-app" class="card-app">
+    <h1>State & Co.</h1>
+    <div id="counter">Round: <span class="inner">0</span></div>
+</div>
+
+
+<script id="player-stats-template" type="text/x-handlebars-template">
+    <div class="overlay-success"><h1>Your have opened your society!</h1>
+        <p>Rodey Seijkens, Marjan Stojnev, Mite Kuzevski, Haris Dedovic, Nabin Silwal.</p>
+    </div>
+    <div class="overlay-fail"><h1>Your country collapsed!</h1>
+        <p>Rodey Seijkens, Marjan Stojnev, Mite Kuzevski, Haris Dedovic, Nabin Silwal.</p>
+    </div>
+    <h3>{{Country_Name}}</h3>
+    <ul>
+        <li><b>Political Freedom: </b>{{Political_Freedom}}</li>
+        <li><b>Media Freedom: </b>{{Media_Freedom}}</li>
+        <li><b>Human Rights: </b>{{Human_Rights}}</li>
+        <li><b>Economic Freedom: </b>{{Economic_Freedom}}</li>
+        <li><b>Satisfaction: </b>{{Satisfaction}}</li>
+        <li><b>Wealth: </b>{{Wealth}}</li>
+        <li><b>System Stability: </b>{{System_Stability}}</li>
+    </ul>
+</script>
+
+<script id="player-hand-template" type="text/x-handlebars-template">
+    {{#each this}}
+    <div class="card {{Card_Type}}" data-card-id="{{Card_Id}}">
+        <h3>{{Card_Name}}</h3>
+        <div class="type">{{Card_Type}}</div>
+        <img class="Action" src="assets/images/action.jpg" />
+        <img class="Event" src="assets/images/event.jpg" />
+        <img class="Offer" src="assets/images/offer.jpg" />
+
+        {{#if Secondary}}
+        <ul>
+            <li><b>Political Freedom: </b>{{Political_Freedom}} or {{Secondary.Political_Freedom}}</li>
+
+            <li><b>Media Freedom: </b>{{Media_Freedom}} or {{Secondary.Media_Freedom}}</li>
+
+            <li><b>Human Rights: </b>{{Human_Rights}} or {{Secondary.Human_Rights}}</li>
+
+            <li><b>Economic Freedom: </b>{{Economic_Freedom}} or {{Secondary.Economic_Freedom}}</li>
+
+            <li><b>Satisfaction: </b>{{Satisfaction}} or {{Secondary.Satisfaction}}</li>
+
+            <li><b>Wealth: </b>{{Wealth}} or {{Secondary.Wealth}}</li>
+
+            <li><b>System Stability: </b>{{System_Stability}} or {{Secondary.System_Stability}}</li>
+        </ul>
+        {{else}}
+        <ul>
+            {{#if Political_Freedom}}
+            <li><b>Political Freedom: </b>{{Political_Freedom}}</li>
+            {{/if}}
+
+            {{#if Media_Freedom}}
+            <li><b>Media Freedom: </b>{{Media_Freedom}}</li>
+            {{/if}}
+
+            {{#if Human_Rights}}
+            <li><b>Human Rights: </b>{{Human_Rights}}</li>
+            {{/if}}
+
+            {{#if Economic_Freedom}}
+            <li><b>Economic Freedom: </b>{{Economic_Freedom}}</li>
+            {{/if}}
+
+            {{#if Satisfaction}}
+            <li><b>Satisfaction: </b>{{Satisfaction}}</li>
+            {{/if}}
+
+            {{#if Wealth}}
+            <li><b>Wealth: </b>{{Wealth}}</li>
+            {{/if}}
+
+            {{#if System_Stability}}
+            <li><b>System Stability: </b>{{System_Stability}}</li>
+            {{/if}}
+        </ul>
+        {{/if}}
+
+        <div class="button">Play</div>
+    </div>
+    {{/each}}
+
+    <div id="draw-card" class="card"><h1>Draw Card</h1></div>
+</script>
+
+<script type="text/javascript" src="assets/lib/less-min.js"></script>
+<script type="text/javascript" src="assets/lib/jquery-min.js"></script>
+<script type="text/javascript" src="assets/lib/handlebars-min.js"></script>
+<script type="text/javascript" src="assets/lib/underscore-min.js"></script>
+<script type="text/javascript" src="assets/lib/backbone-min.js"></script>
+<script type="text/javascript" src="assets/js/app.js"></script>
+</body>
+</html>

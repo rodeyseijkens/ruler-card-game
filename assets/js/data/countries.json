@@ -1,0 +1,32 @@
+[
+  {
+    "Country_Name": "China",
+    "Political_Freedom": 1,
+    "Media_Freedom": 2,
+    "Human_Rights": 3,
+    "Economic_Freedom": 1,
+    "Satisfaction": 7,
+    "Wealth": 8,
+    "System_Stability": 8
+  },
+  {
+    "Country_Name": "Russia",
+    "Political_Freedom": 2,
+    "Media_Freedom": 1,
+    "Human_Rights": 2,
+    "Economic_Freedom": 3,
+    "Satisfaction": 4,
+    "Wealth": 9,
+    "System_Stability": 7
+  },
+  {
+    "Country_Name": "North Korea",
+    "Political_Freedom": 1,
+    "Media_Freedom": 1,
+    "Human_Rights": 2,
+    "Economic_Freedom": 1,
+    "Satisfaction": 3,
+    "Wealth": 7,
+    "System_Stability": 9
+  }
+]
